@@ -29,7 +29,7 @@ export default function PublicMeals({ meals }) {
       });
     });
     meals.forEach(meal => {
-      const cat = meal.categoria || 'Acompanhamentos e Bebidas';
+      const cat = meal.categoria || 'Acompanhamentos';
       const tipo = meal.tipoPrato || 'Prato Principal';
       if (!obj[cat]) obj[cat] = {};
       if (!obj[cat][tipo]) obj[cat][tipo] = [];

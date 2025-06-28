@@ -39,7 +39,7 @@ export default function AdminDashboard({ meals, onAdd, onDelete, mealInput, setM
 
   // Salvar propagandaIds no backend sempre que mudar
   useEffect(() => {
-    if (propagandaIds && propagandaIds.length >= 0) {
+    if (propagandaIds && propagandaIds.length > 0) {
       fetch('http://localhost:5000/meals/propaganda', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
