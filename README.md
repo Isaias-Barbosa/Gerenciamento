@@ -38,3 +38,4 @@ Acesse o frontend em http://localhost:5173 e o backend em http://localhost:5000.
 ## Observações
 - Configure as variáveis de ambiente do Google OAuth no backend (`GOOGLE_CLIENT_ID` e `GOOGLE_CLIENT_SECRET`).
 - O backend aceita requisições do frontend local.
+# Gerenciamento
