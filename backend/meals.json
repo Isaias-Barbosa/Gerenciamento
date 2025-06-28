@@ -1,0 +1,328 @@
+[
+  {
+    "id": "1751072618342",
+    "name": "Bife Ancho com Batatas Rústicas",
+    "description": "Corte nobre grelhado no ponto ideal, acompanhado de batatas rústicas aromatizadas.",
+    "date": "2025-06-27",
+    "ingredients": [
+      "Bife ancho",
+      "sal grosso",
+      "batatas",
+      "alecrim",
+      "azeite e alho."
+    ],
+    "price": "52.00",
+    "image": "https://www.receiteria.com.br/wp-content/uploads/bife-ancho.jpg",
+    "isMenuOfDay": true,
+    "isPropaganda": true,
+    "categoria": "Carnes",
+    "tipoPrato": "Prato Principal"
+  },
+  {
+    "id": "1751072717457",
+    "name": "Camarão na Moranga",
+    "description": "Recheio cremoso de camarões servido dentro da abóbora assada. Sabor marcante e leve picância.",
+    "date": "2025-06-27",
+    "ingredients": [
+      "Abóbora moranga",
+      "camarão",
+      "creme de leite",
+      "requeijão",
+      "cebola",
+      "tomate."
+    ],
+    "price": "56.00",
+    "image": "https://superandreazza.com.br/wp-content/uploads/2022/04/receita-de-camarao-na-moranga-andreazza-optimized.jpg",
+    "isMenuOfDay": true,
+    "isPropaganda": true,
+    "categoria": "Frangos e Peixes",
+    "tipoPrato": "Prato Principal"
+  },
+  {
+    "id": "1751083445276",
+    "name": "Salada Caprese",
+    "description": "Salada leve, refrescante e elegante. Ótima opção de entrada ou prato leve.",
+    "date": "2025-06-28",
+    "ingredients": [
+      "Tomate",
+      "muçarela de búfala",
+      "manjericão",
+      "azeite de oliva",
+      "sal e pimenta."
+    ],
+    "price": "25.00",
+    "image": "https://lucanacozinha.com.br/wp-content/uploads/2017/11/salada-caprese.jpg",
+    "categoria": "Saladas",
+    "tipoPrato": "Entrada",
+    "isPropaganda": true
+  },
+  {
+    "id": "1751083561879",
+    "name": "Taco Mexicano de Carne",
+    "description": "Três tacos crocantes recheados com carne e acompanhamentos frescos.",
+    "date": "2025-06-28",
+    "ingredients": [
+      "Tortillas de milho",
+      "carne moída temperada",
+      "alface",
+      "tomate",
+      "queijo",
+      "sour cream."
+    ],
+    "price": "31.00",
+    "image": "https://imag.bonviveur.com/presentacion-principal-de-los-tacos-mexicanos-de-carne.jpg",
+    "categoria": "Aperitivos",
+    "tipoPrato": "Entrada",
+    "isPropaganda": false
+  },
+  {
+    "id": "1751083681655",
+    "name": "Lasanha à Bolonhesa",
+    "description": "Lasanha caseira, generosamente recheada com carne e queijos, gratinada ao forno.",
+    "date": "2025-06-28",
+    "ingredients": [
+      "Massa de lasanha",
+      "carne moída",
+      "molho de tomate",
+      "queijo muçarela",
+      "presunto",
+      "molho branco."
+    ],
+    "price": "34.00",
+    "image": "https://guiadacozinha.com.br/wp-content/uploads/2014/01/lasanha-bolonhesa-na-pressao.jpg",
+    "categoria": "Massas",
+    "tipoPrato": "Prato Principal",
+    "isPropaganda": true,
+    "isMenuOfDay": true
+  },
+  {
+    "id": "1751084221432",
+    "name": "Feijoada Completa",
+    "description": "Clássico da culinária brasileira, servido com todos os acompanhamentos tradicionais.",
+    "date": "2025-06-28",
+    "ingredients": [
+      "Feijão preto",
+      "carne seca",
+      "costelinha",
+      "paio",
+      "linguiça",
+      "arroz",
+      "couve e laranja."
+    ],
+    "price": "42.00",
+    "image": "https://compactaprint.com.br/wp-content/uploads/2025/06/Receita-de-Feijoada-Completa-Simples-e-Saborosa-na-sua-Mesa.jpg",
+    "categoria": "Carnes",
+    "tipoPrato": "Prato Principal",
+    "isPropaganda": true
+  },
+  {
+    "id": "1751084270985",
+    "name": "Spaghetti à Carbonara",
+    "description": "Receita tradicional italiana, cremosa e rica, feita sem creme de leite.",
+    "date": "2025-06-28",
+    "ingredients": [
+      "Massa",
+      "ovos",
+      "pancetta",
+      "parmesão",
+      "pimenta-do-reino."
+    ],
+    "price": "36.00",
+    "image": "https://i.panelinha.com.br/i1/bk-2473-blog-ayu6706.webp",
+    "categoria": "Massas",
+    "tipoPrato": "Entrada",
+    "isMenuOfDay": true,
+    "isPropaganda": false
+  },
+  {
+    "id": "1751084338310",
+    "name": "Moqueca Baiana de Peixe",
+    "description": "Moqueca aromática e colorida, servida com arroz branco e farofa de dendê.",
+    "date": "2025-06-28",
+    "ingredients": [
+      "Postas de peixe (cação ou robalo)",
+      "leite de coco",
+      "azeite de dendê",
+      "pimentões",
+      "tomate",
+      "cebola e coentro."
+    ],
+    "price": "44.00",
+    "image": "https://minhasreceitinhas.com.br/wp-content/uploads/2022/06/moqueca-de-peixe-baiana-1200x800.jpg",
+    "categoria": "Frangos e Peixes",
+    "tipoPrato": "Prato Principal",
+    "isPropaganda": true,
+    "isMenuOfDay": true
+  },
+  {
+    "id": "1751084400566",
+    "name": "Strogonoff de Frango",
+    "description": "Clássico brasileiro, cremoso e equilibrado, servido com arroz e batata crocante.",
+    "date": "2025-06-28",
+    "ingredients": [
+      "Frango em cubos",
+      "creme de leite",
+      "ketchup",
+      "mostarda",
+      "cebola",
+      "arroz branco e batata palha."
+    ],
+    "price": "33.00",
+    "image": "https://receitasdepesos.com.br/wp-content/uploads/2025/03/strogonoff-de-frango-1080x720.jpg",
+    "categoria": "Frangos e Peixes",
+    "tipoPrato": "Prato Principal",
+    "isPropaganda": false
+  },
+  {
+    "id": "1751084462068",
+    "name": "Cuscuz Nordestino com Ovo e Queijo Coalho",
+    "description": "Prato típico nordestino com sabor marcante e aconchegante.",
+    "date": "2025-06-28",
+    "ingredients": [
+      "Flocos de milho",
+      "sal",
+      "ovo frito",
+      "queijo coalho grelhado e manteiga"
+    ],
+    "price": "22.00",
+    "image": "https://www.deline.com.br/assets/images/recipes/cuscuz-com-ovo-e-queijo-coalho/desktop/thumb-large.jpg",
+    "categoria": "Acompanhamentos",
+    "tipoPrato": "Sobremesa",
+    "isPropaganda": false
+  },
+  {
+    "id": "1751084523535",
+    "name": "Omelete de Queijo e Ervas",
+    "description": "Omelete leve e recheado com queijo derretido e ervas frescas.",
+    "date": "2025-06-28",
+    "ingredients": [
+      "Ovos",
+      "queijo muçarela",
+      "salsa",
+      "cebolinha",
+      "sal",
+      "pimenta."
+    ],
+    "price": "18.00",
+    "image": "https://receitasdepesos.com.br/wp-content/uploads/2024/07/omelete-om-ervas-frescas-e-queijo-branco.jpg",
+    "categoria": "Massas",
+    "tipoPrato": "Entrada",
+    "isPropaganda": false
+  },
+  {
+    "id": "1751084603975",
+    "name": "Crepe de Frango com Catupiry",
+    "description": "Recheio cremoso envolto em massa leve, gratinado ao forno.",
+    "date": "2025-06-28",
+    "ingredients": [
+      "Massa de crepe",
+      "frango desfiado",
+      "requeijão cremoso",
+      "molho branco."
+    ],
+    "price": "29.00",
+    "image": "https://nesselugar.com.br/wp-content/uploads/2022/07/Receita-de-Crepe-de-Frango.png",
+    "categoria": "Acompanhamentos",
+    "tipoPrato": "Sobremesa",
+    "isMenuOfDay": true,
+    "isPropaganda": false
+  },
+  {
+    "id": "1751084662548",
+    "name": "Cheesecake com Calda de Frutas Vermelhas",
+    "description": "Cheesecake leve e doce na medida certa, com toque ácido da calda.",
+    "date": "2025-06-28",
+    "ingredients": [
+      "Cream cheese",
+      "ovos",
+      "biscoito",
+      "manteiga",
+      "frutas vermelhas",
+      "açúcar."
+    ],
+    "price": "21.00",
+    "image": "https://s2-casaejardim.glbimg.com/JTAVq7bSTzH9FUt15NYgRt8uhdI=/0x0:1400x933/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_a0b7e59562ef42049f4e191fe476fe7d/internal_photos/bs/2023/W/N/xFMhu4QUmKnYuCIw4fvw/receita-cheesecake-tradicional-frutas-vermelhas-gero-panini.jpeg",
+    "categoria": "Aperitivos",
+    "tipoPrato": "Sobremesa",
+    "isPropaganda": true
+  },
+  {
+    "id": "1751084730516",
+    "name": "Suco Natural de Laranja",
+    "description": "Refrescante e cheio de vitamina C, servido sem açúcar (opcional).",
+    "date": "2025-06-28",
+    "ingredients": [
+      "Laranja fresca espremida na hora."
+    ],
+    "price": "9.00",
+    "image": "https://image.tuasaude.com/media/article/go/jh/suco-de-laranja_67324.jpg",
+    "categoria": "Bebidas",
+    "tipoPrato": "",
+    "isPropaganda": false
+  },
+  {
+    "id": "1751084803809",
+    "name": "Refrigerante (lata)",
+    "description": "Bebidas clássicas, servidas geladas.",
+    "date": "2025-06-28",
+    "ingredients": [
+      "Coca-Cola",
+      "Guaraná",
+      "Fanta",
+      "Sprite."
+    ],
+    "price": "8.00",
+    "image": "https://static-images.ifood.com.br/pratos/777cb163-48d6-475e-877e-6af0b551cb49/202101131343_cZgm_.jpeg",
+    "categoria": "Bebidas",
+    "tipoPrato": "",
+    "isPropaganda": false
+  },
+  {
+    "id": "1751084855974",
+    "name": "Água com Gás / Sem Gás",
+    "description": "Para hidratar e acompanhar refeições sem interferir no sabor.",
+    "date": "2025-06-28",
+    "ingredients": [
+      "Natural ou gaseificada."
+    ],
+    "price": "5.00",
+    "image": "https://fly.metroimg.com/upload/q_85,w_700/https://uploads.metroimg.com/wp-content/uploads/2024/07/17190829/Agua-com-gas-1.jpg",
+    "categoria": "Bebidas",
+    "tipoPrato": "",
+    "isPropaganda": false
+  },
+  {
+    "id": "1751084908216",
+    "name": "Limonada Suíça com Leite Condensado",
+    "description": "Cremosa, doce e cítrica ao mesmo tempo. Uma explosão de sabor.",
+    "date": "2025-06-28",
+    "ingredients": [
+      "Limão com casca",
+      "água",
+      "gelo",
+      "leite condensado."
+    ],
+    "price": "16.00",
+    "image": "https://www.acasaencantada.com.br/wp-content/uploads/2022/03/Limonada-suica-de-leite-condensado.webp",
+    "categoria": "Bebidas",
+    "tipoPrato": "Sobremesa",
+    "isPropaganda": false
+  },
+  {
+    "id": "1751084956096",
+    "name": "Smoothie de Morango com Banana",
+    "description": "Bebida cremosa, nutritiva e levemente adocicada.",
+    "date": "2025-06-28",
+    "ingredients": [
+      "Morango",
+      "banana",
+      "iogurte natural e mel."
+    ],
+    "price": "18.00",
+    "image": "https://www.receitasnestle.com.br/sites/default/files/srh_recipes/046ee5a0b348816649c5959427adc37f.jpg",
+    "categoria": "Bebidas",
+    "tipoPrato": "Sobremesa",
+    "isMenuOfDay": true,
+    "isPropaganda": true
+  }
+]
