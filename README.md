@@ -58,3 +58,4 @@ Para testar a API, use ferramentas como Postman ou Insomnia, ou consuma via fron
 - O backend aceita requisições do frontend local (`http://localhost:5173`).
 - Em produção, ajuste os redirects do OAuth e CORS para o domínio do frontend.
 # Gerenciamento
+Fim.
