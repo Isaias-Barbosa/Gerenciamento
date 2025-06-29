@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import fs from 'fs';
 import { join, dirname } from 'path';
+
 import { fileURLToPath } from 'url';
 
 const app = express();
@@ -67,6 +68,14 @@ app.delete('/api/menuExecutivo/:id', (req, res) => {
       res.json(menus);
     });
   });
+});
+
+// Servir o frontend buildado (dist) pelo Express
+import path from 'path';
+
+app.use(express.static(path.join(__dirname, 'dist')));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
 app.listen(PORT, () => {
