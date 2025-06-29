@@ -13,7 +13,13 @@ Este projeto é um app fullstack para planejamento de refeições, com frontend 
    ```sh
    npm install
    ```
-3. Inicie o servidor:
+3. Crie um arquivo `.env` na pasta `backend` com as variáveis do Google OAuth:
+   ```env
+   GOOGLE_CLIENT_ID=seu_client_id
+   GOOGLE_CLIENT_SECRET=seu_client_secret
+   SESSION_SECRET=sua_session_secret
+   ```
+4. Inicie o servidor:
    ```sh
    npm start
    ```
@@ -49,5 +55,6 @@ Para testar a API, use ferramentas como Postman ou Insomnia, ou consuma via fron
 
 ## Observações
 - Configure as variáveis de ambiente do Google OAuth no backend (`GOOGLE_CLIENT_ID` e `GOOGLE_CLIENT_SECRET`).
-- O backend aceita requisições do frontend local.
+- O backend aceita requisições do frontend local (`http://localhost:5173`).
+- Em produção, ajuste os redirects do OAuth e CORS para o domínio do frontend.
 # Gerenciamento
