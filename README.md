@@ -30,6 +30,18 @@ Este projeto é um app fullstack para planejamento de refeições, com frontend 
 
 Acesse o frontend em http://localhost:5173 e o backend em http://localhost:5000.
 
+### API
+A API REST roda junto com o backend Express. Endpoints principais:
+
+- `GET /api/meals` — Lista todas as refeições
+- `POST /api/meals` — Cria uma nova refeição
+- `PUT /api/meals/:id` — Edita uma refeição
+- `DELETE /api/meals/:id` — Remove uma refeição
+- `GET /api/menuExecutivo` — Lista menus executivos
+- `POST /api/menuExecutivo` — Cria menu executivo
+
+Para testar a API, use ferramentas como Postman ou Insomnia, ou consuma via frontend já integrado.
+
 ## Funcionalidades
 - Login com Google (OAuth)
 - Planejamento de refeições (CRUD)
