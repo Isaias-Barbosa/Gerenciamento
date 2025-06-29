@@ -1,8 +1,8 @@
 [
   {
-    "id": "1751160459216",
+    "id": "1751172341643",
     "nome": "Reunião de Sabores",
-    "data": "2025-06-28",
+    "data": "2025-06-29",
     "entrada": {
       "id": "1751125588333",
       "name": "Salada Grega",
@@ -63,7 +63,7 @@
       "isMenuOfDay": true,
       "isExecutive": true
     },
-    "preco": "89.99",
+    "preco": "99.95",
     "imagem": "https://revistamenu.com.br/wp-content/uploads/sites/24/2024/11/steak-bife1.jpg"
   }
 ]
