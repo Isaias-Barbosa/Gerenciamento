@@ -1,22 +1,18 @@
 import React from 'react';
 
-export default function Carousel({ images, style, auto = true, interval = 3500 }) {
-  const [idx, setIdx] = React.useState(0);
-  React.useEffect(() => {
-    if (!auto) return;
-    const timer = setInterval(() => setIdx(i => (i + 1) % images.length), interval);
-    return () => clearInterval(timer);
-  }, [images.length, auto, interval]);
-  if (!images.length) return null;
+export default function Carousel({ images, style }) {
+  // Exibe até 2 imagens lado a lado
+  const showImages = images.slice(0, 2);
   return (
-    <div style={{ width: '100%', maxWidth: 1200, height: 520, margin: '40px auto 0 auto', position: 'relative', borderRadius: 32, overflow: 'hidden', boxShadow: '0 6px 40px #0003', background: '#18181b', ...style }}>
-      <img src={images[idx].url} alt={images[idx].alt} style={{ width: '100%', height: 520, objectFit: 'cover', borderRadius: 32 }} />
-      <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, background: 'linear-gradient(0deg, #18181b 90%, #0000 100%)', color: '#fff', padding: 18, fontSize: 26, fontWeight: 700, letterSpacing: 1, textShadow: 'none', border: 'none', boxShadow: 'none' }}>{images[idx].caption}</div>
-      <div style={{ position: 'absolute', left: 0, right: 0, bottom: 24, display: 'flex', gap: 14, justifyContent: 'center', zIndex: 2 }}>
-        {images.map((_, i) => (
-          <span key={i} style={{ width: 18, height: 18, borderRadius: '50%', background: i === idx ? '#27548A' : '#bbb', display: 'inline-block', cursor: 'pointer', border: 'none', transition: 'background 0.2s' }} onClick={() => setIdx(i)} />
-        ))}
-      </div>
+    <div style={{ width: '100vw', maxWidth: '100vw', display: 'flex', gap: 48, justifyContent: 'center', alignItems: 'flex-end', margin: '0 auto', ...style }}>
+      {showImages.map((img, i) => (
+        <div key={i} style={{ flex: 1, maxWidth: 600, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <img src={img.url} alt={img.alt} style={{ width: '100%', maxWidth: 520, height: 380, objectFit: 'cover', borderRadius: 24, boxShadow: '0 6px 40px #0005', border: 'none', display: 'block' }} />
+          <div style={{ width: '100%', color: '#fff', fontSize: 36, fontWeight: 700, letterSpacing: 1, textShadow: '0 2px 16px #000b', textAlign: 'center', marginTop: 18, fontFamily: 'Cormorant Garamond, serif', background: 'none' }}>
+            {img.caption}
+          </div>
+        </div>
+      ))}
     </div>
   );
 }

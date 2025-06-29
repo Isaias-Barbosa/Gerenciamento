@@ -7,7 +7,7 @@ export default function Navbar({ user, onLogin, onLogout, meals = [] }) {
   const isAdmin = user && user.emails && user.emails[0]?.value === 'isaiasbarbosa111@gmail.com';
   const linkStyle = base => ({
     cursor: 'pointer',
-    color: base ? '#27548A' : '#27548A99',
+    color: base ? '#FF7F3E' : '#003285',
     position: 'relative',
     transition: 'color 0.2s',
     padding: '4px 8px',
@@ -23,9 +23,9 @@ export default function Navbar({ user, onLogin, onLogout, meals = [] }) {
   ) : [];
 
   return (
-    <nav style={{ width: '100%', background: '#fff', color: '#27548A', boxShadow: '0 2px 12px #0001', padding: '0', height: 110, display: 'flex', alignItems: 'center', justifyContent: 'space-around', position: 'relative', top: 0, left: 0, zIndex: 100, fontWeight: 700 }}>
-      <div style={{ fontSize: 28, fontWeight: 800, color: '#27548A', letterSpacing: 1, cursor: 'pointer' }} onClick={() => navigate('/')}>Sabor & Alma</div>
-      <div style={{ display: 'flex', gap: 32, alignItems: 'center', fontSize: 18 }}>
+    <nav style={{ width: '100%', background: '#fff', color: '#133E87', boxShadow: '0 2px 12px #0001', padding: '0', height: 110, display: 'flex', alignItems: 'center', justifyContent: 'space-around', position: 'relative', top: 0, left: 0, zIndex: 100, fontWeight: 700 }}>
+      <div style={{ fontSize: 28, fontWeight: 800, color: '#001A6E', letterSpacing: 1, cursor: 'pointer' }} onClick={() => navigate('/')}>Sabor & Alma</div>
+      <div style={{ display: 'flex', gap: 32, alignItems: 'center', fontSize: 18}}>
         <span
           style={{ ...linkStyle(location.pathname === '/'), background: hovered === 'home' ? '#eaf2fa' : 'none' }}
           onMouseEnter={() => setHovered('home')}

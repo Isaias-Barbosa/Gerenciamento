@@ -275,7 +275,10 @@
     "image": "https://static-images.ifood.com.br/pratos/777cb163-48d6-475e-877e-6af0b551cb49/202101131343_cZgm_.jpeg",
     "categoria": "Bebidas",
     "tipoPrato": "",
-    "isPropaganda": false
+    "isPropaganda": false,
+    "isMenuOfDay": false,
+    "isExecutive": false,
+    "isDestaque": false
   },
   {
     "id": "1751084855974",
@@ -324,5 +327,529 @@
     "tipoPrato": "Sobremesa",
     "isMenuOfDay": true,
     "isPropaganda": true
+  },
+  {
+    "id": "novo-1",
+    "name": "Bruschetta Tradicional",
+    "description": "Pão italiano tostado com tomate, alho e manjericão.",
+    "ingredients": [
+      "baguette",
+      "tomate",
+      "alho",
+      "manjericão",
+      "azeite",
+      "sal",
+      "pimenta"
+    ],
+    "categoria": "Acompanhamentos",
+    "tipoPrato": "Entrada",
+    "image": "https://blog.biglar.com.br/wp-content/uploads/2023/04/iStock-532128106.jpeg",
+    "date": "2025-01-10",
+    "price": "34.00",
+    "isMenuOfDay": true,
+    "isExecutive": false,
+    "isDestaque": false
+  },
+  {
+    "id": "novo-2",
+    "name": "Canapés de Salmão Defumado",
+    "description": "Mini torradas com cream cheese e salmão defumado.",
+    "ingredients": [
+      "pão integral",
+      "cream cheese",
+      "salmão defumado",
+      "endro",
+      "limão"
+    ],
+    "categoria": "Aperitivos",
+    "tipoPrato": "Entrada",
+    "image": "https://revistavitale.com.br/wp-content/uploads/2016/01/salmao.jpg",
+    "date": "2025-02-15",
+    "price": "19.00",
+    "isMenuOfDay": false,
+    "isExecutive": false,
+    "isDestaque": false
+  },
+  {
+    "id": "novo-3",
+    "name": "Ceviche de Tilápia",
+    "description": "Cubos de tilápia marinados no limão com cebola roxa e coentro.",
+    "ingredients": [
+      "tilápia",
+      "limão",
+      "cebola roxa",
+      "coentro",
+      "pimenta dedo‑de‑moça",
+      "sal"
+    ],
+    "categoria": "Entrada",
+    "tipoPrato": "Entrada",
+    "image": "https://images.pexels.com/photos/2.jpeg",
+    "date": "2025-03-20"
+  },
+  {
+    "id": "novo-4",
+    "name": "Salada Caprese",
+    "description": "Tomate, mozzarela de búfala e manjericão, regado com azeite e balsâmico.",
+    "ingredients": [
+      "tomate",
+      "mozzarela de búfala",
+      "manjericão",
+      "azeite",
+      "vinagre balsâmico",
+      "sal"
+    ],
+    "categoria": "Entrada",
+    "tipoPrato": "Entrada",
+    "image": "https://images.pexels.com/photos/3.jpeg",
+    "date": "2025-04-05"
+  },
+  {
+    "id": "novo-5",
+    "name": "Tábua de Frios",
+    "description": "Mix de queijos, embutidos, frutas secas e pães.",
+    "ingredients": [
+      "queijos variados",
+      "salame",
+      "presunto cru",
+      "uvas",
+      "castanhas",
+      "pães"
+    ],
+    "categoria": "Entrada",
+    "tipoPrato": "Entrada",
+    "image": "https://images.pexels.com/photos/4.jpeg",
+    "date": "2025-05-12"
+  },
+  {
+    "id": "novo-6",
+    "name": "Arroz de Brócolis",
+    "description": "Arroz soltinho com pedaços de brócolis e temperos.",
+    "ingredients": [
+      "arroz",
+      "brócolis",
+      "cebola",
+      "alho",
+      "azeite",
+      "sal"
+    ],
+    "categoria": "Complemento",
+    "tipoPrato": "Complemento",
+    "image": "https://images.unsplash.com/photo-5.jpeg",
+    "date": "2025-06-01"
+  },
+  {
+    "id": "novo-7",
+    "name": "Batata Rústica",
+    "description": "Batatas ao forno com alecrim e alho.",
+    "ingredients": [
+      "batatas",
+      "alecrim",
+      "alho",
+      "azeite",
+      "sal",
+      "pimenta"
+    ],
+    "categoria": "Complemento",
+    "tipoPrato": "Complemento",
+    "image": "https://images.unsplash.com/photo-6.jpeg",
+    "date": "2025-06-10"
+  },
+  {
+    "id": "novo-8",
+    "name": "Farofa de Banana",
+    "description": "Farofa crocante com banana-da-terra e cebola.",
+    "ingredients": [
+      "farinha de mandioca",
+      "banana-da-terra",
+      "cebola",
+      "manteiga",
+      "sal"
+    ],
+    "categoria": "Acompanhamentos",
+    "tipoPrato": "Sobremesa",
+    "image": "https://todeschinialimentos.com.br/images/receitas/40/todeschini-imagem-receitas-farofa-de-banana-com-cream-cracker-share.jpg",
+    "date": "2025-07-03",
+    "price": "14.99",
+    "isMenuOfDay": false
+  },
+  {
+    "id": "novo-9",
+    "name": "Couve Refogada",
+    "description": "Couve japonesa refogada com alho.",
+    "ingredients": [
+      "couve",
+      "alho",
+      "azeite",
+      "sal"
+    ],
+    "categoria": "Complemento",
+    "tipoPrato": "Complemento",
+    "image": "https://images.unsplash.com/photo-8.jpeg",
+    "date": "2025-07-15"
+  },
+  {
+    "id": "novo-10",
+    "name": "Legumes Grelhados",
+    "description": "Mix de legumes sazonais grelhados ao azeite.",
+    "ingredients": [
+      "berinjela",
+      "abobrinha",
+      "pimentão",
+      "azeite",
+      "sal",
+      "ervas"
+    ],
+    "categoria": "Complemento",
+    "tipoPrato": "Complemento",
+    "image": "https://images.unsplash.com/photo-9.jpeg",
+    "date": "2025-08-08"
+  },
+  {
+    "id": "novo-11",
+    "name": "Filé Mignon ao Molho de Vinho",
+    "description": "Corte nobre grelhado servido com molho de vinho tinto.",
+    "ingredients": [
+      "filé mignon",
+      "vinho tinto",
+      "alho",
+      "manteiga",
+      "sal",
+      "pimenta"
+    ],
+    "categoria": "Carnes",
+    "tipoPrato": "Prato Principal",
+    "image": "https://canaldareceita.com.br/wp-content/uploads/2025/02/File-Mignon-ao-Molho-de-Vinho-Tinto-1200x720.jpg",
+    "date": "2025-08-20",
+    "price": "66.00",
+    "isMenuOfDay": true,
+    "isExecutive": true,
+    "isDestaque": true
+  },
+  {
+    "id": "novo-12",
+    "name": "Spaghetti ao Pesto",
+    "description": "Massa leve com molho pesto de manjericão e pinoli.",
+    "ingredients": [
+      "spaghetti",
+      "manjericão",
+      "pinoli",
+      "azeite",
+      "parmesão",
+      "alho"
+    ],
+    "categoria": "Massa",
+    "tipoPrato": "Prato Principal",
+    "image": "https://images.unsplash.com/photo-11.jpeg",
+    "date": "2025-09-02"
+  },
+  {
+    "id": "novo-13",
+    "name": "Salmão Grelhado com Ervas",
+    "description": "Salmão fresco grelhado com ervas finas.",
+    "ingredients": [
+      "salmão",
+      "ervas finas",
+      "limão",
+      "azeite",
+      "sal",
+      "pimenta"
+    ],
+    "categoria": "Frangos e Peixes",
+    "tipoPrato": "Prato Principal",
+    "image": "https://catracalivre.com.br/wp-content/uploads/2024/08/istock-183232774.jpg",
+    "date": "2025-09-15",
+    "price": "57.00",
+    "isMenuOfDay": true,
+    "isExecutive": true
+  },
+  {
+    "id": "novo-14",
+    "name": "Frango ao Curry",
+    "description": "Cubos de frango cozidos em curry com leite de coco.",
+    "ingredients": [
+      "frango",
+      "curry",
+      "leite de coco",
+      "cebola",
+      "alho",
+      "gengibre"
+    ],
+    "categoria": "Frangos e Peixes",
+    "tipoPrato": "Prato Principal",
+    "image": "https://www.agrimidia.com.br/wp-content/uploads/2024/01/78468ad5288d433009367eeff5a5f3b3_XL.jpg",
+    "date": "2025-10-01",
+    "price": "47.90",
+    "isMenuOfDay": false,
+    "isExecutive": false,
+    "isDestaque": false
+  },
+  {
+    "id": "novo-15",
+    "name": "Risoto de Camarão",
+    "description": "Arroz arbório cremoso com camarões e parmesão.",
+    "ingredients": [
+      "arroz arbório",
+      "camarão",
+      "cebola",
+      "parmesão",
+      "vino bianco",
+      "manteiga"
+    ],
+    "categoria": "Frangos e Peixes",
+    "tipoPrato": "Prato Principal",
+    "image": "https://www.unileverfoodsolutions.com.br/dam/global-ufs/mcos/SLA/calcmenu/recipes/BR-recipes/general/risoto-de-camar%C3%A3o/main-header.jpg",
+    "date": "2025-10-18",
+    "price": "24.98",
+    "isMenuOfDay": true
+  },
+  {
+    "id": "novo-16",
+    "name": "Mousse de Maracujá",
+    "description": "Mousse leve de maracujá, suave e refrescante.",
+    "ingredients": [
+      "leite condensado",
+      "creme de leite",
+      "suco de maracujá",
+      "gelatina"
+    ],
+    "categoria": "Acompanhamentos",
+    "tipoPrato": "Sobremesa",
+    "image": "https://www.receitasnestle.com.br/sites/default/files/srh_recipes/9bc674e5ef07eb7275fb0cd330ea6d5b.png",
+    "date": "2025-11-05",
+    "price": "10.00",
+    "isMenuOfDay": false,
+    "isExecutive": false,
+    "isDestaque": false
+  },
+  {
+    "id": "novo-17",
+    "name": "Brownie com Nozes",
+    "description": "Brownie de chocolate com pedaços de nozes.",
+    "ingredients": [
+      "chocolate",
+      "manteiga",
+      "açúcar",
+      "ovos",
+      "farinha",
+      "nozes"
+    ],
+    "categoria": "Acompanhamentos",
+    "tipoPrato": "Sobremesa",
+    "image": "https://guiadacozinha.com.br/wp-content/uploads/2019/10/brownie-creme-avela-nozes.jpg",
+    "date": "2025-11-20",
+    "price": "10.00",
+    "isMenuOfDay": false
+  },
+  {
+    "id": "novo-18",
+    "name": "Cheesecake de Frutas Vermelhas",
+    "description": "Base de biscoito com recheio cremoso e calda de frutas.",
+    "ingredients": [
+      "cream cheese",
+      "biscoito",
+      "manteiga",
+      "frutas vermelhas",
+      "açúcar"
+    ],
+    "categoria": "Acompanhamentos",
+    "tipoPrato": "Sobremesa",
+    "image": "https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2023/09/13/1467009815-cheesecake-de-frutas-vermelhas.jpg",
+    "date": "2025-12-01",
+    "price": "",
+    "isMenuOfDay": false
+  },
+  {
+    "id": "novo-19",
+    "name": "Pudim de Leite",
+    "description": "Pudim cremoso com calda de caramelo.",
+    "ingredients": [
+      "leite condensado",
+      "leite",
+      "ovos",
+      "açúcar"
+    ],
+    "categoria": "Acompanhamentos",
+    "tipoPrato": "Sobremesa",
+    "image": "https://s2-receitas.glbimg.com/YTXTFuRbAtHmHJV0ddq9QJPqYt8=/0x0:1280x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_1f540e0b94d8437dbbc39d567a1dee68/internal_photos/bs/2021/P/T/BRcriaQP6Lfn7NWtestA/pudim-de-leite-receita.jpg",
+    "date": "2025-12-10",
+    "price": "15.00",
+    "isMenuOfDay": true
+  },
+  {
+    "id": "novo-20",
+    "name": "Torta de Limão",
+    "description": "Torta cítrica com cobertura de merengue.",
+    "ingredients": [
+      "biscoito",
+      "leite condensado",
+      "limão",
+      "claras",
+      "açúcar"
+    ],
+    "categoria": "Acompanhamentos",
+    "tipoPrato": "Sobremesa",
+    "image": "https://www.receiteria.com.br/wp-content/uploads/torta-de-limao-facil-capa.jpeg",
+    "date": "2025-12-20",
+    "price": "23.99",
+    "isMenuOfDay": true,
+    "isExecutive": true
+  },
+  {
+    "id": "novo-21",
+    "name": "Suco de Manga com Hortelã",
+    "description": "Suco natural de manga com toque refrescante de hortelã.",
+    "ingredients": [
+      "manga",
+      "hortelã",
+      "água",
+      "gelo"
+    ],
+    "categoria": "Bebida",
+    "tipoPrato": "Bebida",
+    "image": "https://images.pexels.com/photos/20.jpeg",
+    "date": "2025-01-25"
+  },
+  {
+    "id": "novo-22",
+    "name": "Chá Gelado de Hibisco",
+    "description": "Chá gelado floral, levemente adocicado.",
+    "ingredients": [
+      "chá de hibisco",
+      "limão",
+      "açúcar",
+      "gelo"
+    ],
+    "categoria": "Bebidas",
+    "tipoPrato": "Entrada",
+    "image": "https://p2.trrsf.com/image/fget/cf/1200/900/middle/images.terra.com/2024/02/22/277813643-cha-gelado-de-hibisco.jpg",
+    "date": "2025-02-10",
+    "price": "14.99",
+    "isMenuOfDay": false
+  },
+  {
+    "id": "novo-23",
+    "name": "Limonada Suíça",
+    "description": "Limonada cremosa com casca, leite condensado e gelo.",
+    "ingredients": [
+      "limão",
+      "leite condensado",
+      "água",
+      "gelo"
+    ],
+    "categoria": "Bebida",
+    "tipoPrato": "Bebida",
+    "image": "https://images.pexels.com/photos/22.jpeg",
+    "date": "2025-03-05"
+  },
+  {
+    "id": "novo-24",
+    "name": "Smoothie de Banana com Aveia",
+    "description": "Batido saudável de banana, aveia e iogurte.",
+    "ingredients": [
+      "banana",
+      "aveia",
+      "iogurte natural",
+      "mel",
+      "gelo"
+    ],
+    "categoria": "Bebida",
+    "tipoPrato": "Bebida",
+    "image": "https://images.pexels.com/photos/23.jpeg",
+    "date": "2025-04-18"
+  },
+  {
+    "id": "novo-25",
+    "name": "Clericot sem Álcool",
+    "description": "Mix de frutas refrescante em suco de uva branca.",
+    "ingredients": [
+      "suco de uva",
+      "maçã",
+      "morango",
+      "hortelã",
+      "gelo"
+    ],
+    "categoria": "Bebidas",
+    "tipoPrato": "Bebida",
+    "image": "https://mufs.com.br/wp-content/uploads/2020/11/Clericot-Receitas-1024x711.jpg",
+    "date": "2025-05-10",
+    "price": "15.00",
+    "isMenuOfDay": false,
+    "isExecutive": false,
+    "isDestaque": false
+  },
+  {
+    "id": "1751125119765",
+    "name": "Escondidinho de Carne Seca",
+    "description": "Prato nordestino gratinado, com recheio cremoso e sabor intenso.",
+    "date": "2025-06-24",
+    "ingredients": [
+      "Carne seca desfiada",
+      "purê de mandioca",
+      "requeijão",
+      "queijo muçarela."
+    ],
+    "price": "36.00",
+    "image": "https://guiadacozinha.com.br/wp-content/uploads/2020/11/escondidinho-de-frigideira-1.jpg",
+    "isMenuOfDay": false,
+    "categoria": "Carnes",
+    "tipoPrato": "Prato Principal"
+  },
+  {
+    "id": "1751125361690",
+    "name": "Quiche de Alho-Poró",
+    "description": "Quiche francesa, leve e delicada, com recheio aromático.",
+    "date": "2025-02-15",
+    "ingredients": [
+      "Massa podre",
+      "alho-poró",
+      "ovos",
+      "creme de leite",
+      "queijo."
+    ],
+    "price": "27,00",
+    "image": "https://www.receitasnestle.com.br/sites/default/files/srh_recipes/d6a6f84f954f7f2751faba4d2a7005cb.jpg",
+    "categoria": "Acompanhamentos",
+    "tipoPrato": "Sobremesa",
+    "isMenuOfDay": true
+  },
+  {
+    "id": "1751125588333",
+    "name": "Salada Grega",
+    "description": "Uma salada leve e mediterrânea com pepino, tomate, cebola roxa, azeitonas e queijo feta.",
+    "date": "2025-06-28",
+    "ingredients": [
+      "Pepino",
+      "tomate",
+      "cebola roxa",
+      "azeitonas pretas",
+      "queijo feta",
+      "azeite",
+      "orégano."
+    ],
+    "price": "15,00",
+    "image": "https://www.estadao.com.br/resizer/xgbdreke8bix84U4ILBWMO_KuX0=/arc-anglerfish-arc2-prod-estadao/public/3K45SRWMQBAMHEOCORS3HY2W5I.jpg",
+    "categoria": "Saladas",
+    "tipoPrato": "Entrada",
+    "isMenuOfDay": false,
+    "isExecutive": true
+  },
+  {
+    "id": "1751156846830",
+    "name": "Tostada de Avocado com Ovo",
+    "description": "Fatia de pão integral com purê de avocado e ovo pochê por cima.",
+    "date": "2025-06-28",
+    "ingredients": [
+      "Pão integral",
+      "avocado",
+      "ovo",
+      "limão",
+      "sal",
+      "pimenta."
+    ],
+    "price": "12.50",
+    "image": "https://static1.minhavida.com.br/recipes/26/78/5f/3b/avocado-toast-com-ovo-orig-1.jpg",
+    "categoria": "Acompanhamentos",
+    "tipoPrato": "Entrada"
   }
 ]

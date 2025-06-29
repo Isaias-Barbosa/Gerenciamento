@@ -22,4 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Ignorar todos os arquivos .env em qualquer pasta
+.env
+.env.*
+**/.env
+**/.env.*
 backend/.env

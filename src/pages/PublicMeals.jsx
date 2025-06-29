@@ -40,30 +40,30 @@ export default function PublicMeals({ meals }) {
 
   return (
     <>
-      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #23272f 0%, #18181b 100%)', fontFamily: 'Segoe UI, Arial, sans-serif', paddingTop: 90 }}>
+      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #23272f 0%, #18181b 100%)', fontFamily: 'Segoe UI, Arial, sans-serif', paddingTop: 10 }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '1px 16px' }}>
           <h1 style={{ textAlign: 'center', color: '#fff', fontSize: 40, fontWeight: 800, margin: '40px 0 32px 0', letterSpacing: 1 }}>Cardápio</h1>
           {categorias.map(cat => (
-            <div key={cat} style={{ marginBottom: 48 }}>
+            <div key={cat} style={{ marginBottom: 38 }}>
               <h2 style={{ color: '#fff', fontSize: 30, fontWeight: 700, marginBottom: 18, borderBottom: '2px solid #e0e0e0', paddingBottom: 6 }}>{cat}</h2>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 32, justifyContent: 'center' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 32, justifyContent: 'flex-start' }}>
                 {tipos.flatMap(tipo =>
                   agrupado[cat][tipo].map(meal => (
                     <div
                       key={meal.id}
                       style={{
                         background: '#fff',
-                        borderRadius: 18,
-                        boxShadow: '0 4px 18px #0002',
+                        borderRadius: 20,
+                        boxShadow: '0 2px 12px #0002',
                         padding: 0,
                         overflow: 'hidden',
-                        width: 320,
+                        width: 300,
                         minWidth: 260,
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
                         transition: 'transform 0.2s',
-                        border: '1.5px solid #f1f6fa',
+                        border: '1px solid #f1f6fa',
                         cursor: 'default',
                       }}
                     >

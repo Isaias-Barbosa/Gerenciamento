@@ -1,0 +1,69 @@
+[
+  {
+    "id": "1751160459216",
+    "nome": "Reunião de Sabores",
+    "data": "2025-06-28",
+    "entrada": {
+      "id": "1751125588333",
+      "name": "Salada Grega",
+      "description": "Uma salada leve e mediterrânea com pepino, tomate, cebola roxa, azeitonas e queijo feta.",
+      "date": "2025-06-28",
+      "ingredients": [
+        "Pepino",
+        "tomate",
+        "cebola roxa",
+        "azeitonas pretas",
+        "queijo feta",
+        "azeite",
+        "orégano."
+      ],
+      "price": "15,00",
+      "image": "https://www.estadao.com.br/resizer/xgbdreke8bix84U4ILBWMO_KuX0=/arc-anglerfish-arc2-prod-estadao/public/3K45SRWMQBAMHEOCORS3HY2W5I.jpg",
+      "categoria": "Saladas",
+      "tipoPrato": "Entrada",
+      "isMenuOfDay": false,
+      "isExecutive": true
+    },
+    "principal": {
+      "id": "novo-13",
+      "name": "Salmão Grelhado com Ervas",
+      "description": "Salmão fresco grelhado com ervas finas.",
+      "ingredients": [
+        "salmão",
+        "ervas finas",
+        "limão",
+        "azeite",
+        "sal",
+        "pimenta"
+      ],
+      "categoria": "Frangos e Peixes",
+      "tipoPrato": "Prato Principal",
+      "image": "https://catracalivre.com.br/wp-content/uploads/2024/08/istock-183232774.jpg",
+      "date": "2025-09-15",
+      "price": "57.00",
+      "isMenuOfDay": true,
+      "isExecutive": true
+    },
+    "sobremesa": {
+      "id": "novo-20",
+      "name": "Torta de Limão",
+      "description": "Torta cítrica com cobertura de merengue.",
+      "ingredients": [
+        "biscoito",
+        "leite condensado",
+        "limão",
+        "claras",
+        "açúcar"
+      ],
+      "categoria": "Acompanhamentos",
+      "tipoPrato": "Sobremesa",
+      "image": "https://www.receiteria.com.br/wp-content/uploads/torta-de-limao-facil-capa.jpeg",
+      "date": "2025-12-20",
+      "price": "23.99",
+      "isMenuOfDay": true,
+      "isExecutive": true
+    },
+    "preco": "89.99",
+    "imagem": "https://revistamenu.com.br/wp-content/uploads/sites/24/2024/11/steak-bife1.jpg"
+  }
+]

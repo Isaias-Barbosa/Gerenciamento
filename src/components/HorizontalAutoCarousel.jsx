@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function HorizontalAutoCarousel({ items, itemWidth = 220, itemGap = 32, visible = 5, interval = 2500, onItemClick }) {
+export default function HorizontalAutoCarousel({ items, itemWidth = 340, itemGap = 38, visible = 5, interval = 4000, onItemClick }) {
   const [firstIdx, setFirstIdx] = React.useState(0);
   const totalItems = items.length;
 
@@ -31,10 +31,10 @@ export default function HorizontalAutoCarousel({ items, itemWidth = 220, itemGap
         {visibleItems.map((item, i) => (
           <div
             key={item.id || i}
-            style={{ minWidth: itemWidth, maxWidth: itemWidth, borderRadius: 16, boxShadow: '0 2px 8px #0008', border: '3px solid #fff', background: 'none', cursor: 'pointer', overflow: 'hidden' }}
+            style={{ minWidth: itemWidth, maxWidth: itemWidth, borderRadius: 24, boxShadow: '0 6px 24px #0002', background: 'none', cursor: 'pointer', overflow: 'hidden', minHeight: 160, maxHeight: 260, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}
             onClick={() => onItemClick && onItemClick(item)}
           >
-            <img src={item.image} alt={item.name} title={item.name} style={{ width: '100%', height: 160, objectFit: 'cover', borderRadius: 16 }} />
+            <img src={item.image} alt={item.name} title={item.name} style={{ width: '100%', height: 260, objectFit: 'cover', borderRadius: 18, marginBottom: 18 }} />
           </div>
         ))}
       </div>

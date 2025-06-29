@@ -14,7 +14,9 @@ export default function EditMeal({ meals, onEdit }) {
     image: '',
     isMenuOfDay: false,
     categoria: '',
-    tipoPrato: ''
+    tipoPrato: '',
+    isExecutive: false,
+    isDestaque: false
   });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -30,7 +32,9 @@ export default function EditMeal({ meals, onEdit }) {
         image: meal.image || '',
         isMenuOfDay: !!meal.isMenuOfDay,
         categoria: meal.categoria || '',
-        tipoPrato: meal.tipoPrato || ''
+        tipoPrato: meal.tipoPrato || '',
+        isExecutive: !!meal.isExecutive,
+        isDestaque: !!meal.isDestaque
       });
     }
   }, [meal]);
@@ -51,7 +55,9 @@ export default function EditMeal({ meals, onEdit }) {
         ingredients: form.ingredients.split(',').map(i => i.trim()).filter(i => i),
         isMenuOfDay: form.isMenuOfDay,
         categoria: form.categoria,
-        tipoPrato: form.tipoPrato
+        tipoPrato: form.tipoPrato,
+        isExecutive: form.isExecutive,
+        isDestaque: form.isDestaque
       });
       setLoading(false);
       setSuccess(true);
@@ -107,6 +113,14 @@ export default function EditMeal({ meals, onEdit }) {
           <input type="checkbox" name="isMenuOfDay" checked={form.isMenuOfDay} onChange={handleChange} />
           Prato do Dia
         </label>
+        <label style={{ display: 'flex', alignItems: 'center', gap: 8, color: '#222', fontWeight: 500, marginBottom: 2 }}>
+          <input type="checkbox" name="isExecutive" checked={form.isExecutive} onChange={handleChange} />
+          Prato executivo?
+        </label>
+        <label style={{ display: 'flex', alignItems: 'center', gap: 8, color: '#222', fontWeight: 500, marginBottom: 2 }}>
+          <input type="checkbox" name="isDestaque" checked={form.isDestaque} onChange={handleChange} />
+          Prato Destaque?
+        </label>
         <label style={{ color: '#222', fontWeight: 500, marginBottom: 2 }}>
           Categoria
           <select name="categoria" value={form.categoria} onChange={handleChange} style={{ display: 'block', width: '100%', padding: 8, borderRadius: 6, border: '1px solid #ccc', marginTop: 4, background: '#fff', color: '#222' }}>
@@ -130,6 +144,7 @@ export default function EditMeal({ meals, onEdit }) {
           </select>
         </label>
         <button type="submit" style={{ background: '#2d7a46', color: '#fff', border: 'none', borderRadius: 6, padding: '10px 24px', fontWeight: 600, cursor: 'pointer', marginTop: 12 }}>Salvar Alterações</button>
+        <button type="button" onClick={() => navigate('/dashboard/admin/cardapio')} style={{ background: '#e74c3c', color: '#fff', border: 'none', borderRadius: 6, padding: '10px 24px', fontWeight: 600, cursor: 'pointer', marginTop: 12, marginLeft: 12 }}>Cancelar</button>
       </form>
     </div>
   );
