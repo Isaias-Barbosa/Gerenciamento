@@ -27,8 +27,8 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Backend rodando na porta ${PORT}`));
 
 // No final das rotas do Express (server.js)
-import path from 'path';
-app.use(express.static(path.join(process.cwd(), 'dist')));
+const path = require('path');
+app.use(express.static(path.join(__dirname, 'dist')));
 app.get('*', (req, res) => {
-  res.sendFile(path.join(process.cwd(), 'dist', 'index.html'));
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
