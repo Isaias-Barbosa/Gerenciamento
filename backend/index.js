@@ -25,3 +25,10 @@ app.get('/', (req, res) => res.send('API do Gerenciamento de Refeições'));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Backend rodando na porta ${PORT}`));
+
+// No final das rotas do Express (server.js)
+import path from 'path';
+app.use(express.static(path.join(process.cwd(), 'dist')));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(process.cwd(), 'dist', 'index.html'));
+});
