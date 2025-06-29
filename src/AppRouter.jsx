@@ -101,29 +101,29 @@ export default function AppRouter() {
   const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:5000/auth/user', { credentials: 'include' })
+    fetch('https://meal-planner-bgsh.onrender.com/auth/user', { credentials: 'include' })
       .then(res => res.json())
       .then(data => setUser(data.user || null));
   }, []);
 
   useEffect(() => {
-    fetch('http://localhost:5000/meals', { credentials: 'include' })
+    fetch('https://meal-planner-bgsh.onrender.com/meals', { credentials: 'include' })
       .then(res => res.json())
       .then(setMeals);
   }, [user]);
 
   // Buscar propagandaIds do backend ao carregar
   useEffect(() => {
-    fetch('http://localhost:5000/meals/propaganda')
+    fetch('https://meal-planner-bgsh.onrender.com/meals/propaganda')
       .then(res => res.json())
       .then(data => setPropagandaIds(data.propagandaIds || []));
   }, []);
 
   const handleLogin = () => {
-    window.location.href = 'http://localhost:5000/auth/google';
+    window.location.href = 'https://meal-planner-bgsh.onrender.com/auth/google';
   };
   const handleLogout = () => {
-    window.location.href = 'http://localhost:5000/auth/logout';
+    window.location.href = 'https://meal-planner-bgsh.onrender.com/auth/logout';
   };
   // Novo: permite passar objeto completo para refeição
   const handleAddMeal = (mealObj) => {
@@ -138,7 +138,7 @@ export default function AppRouter() {
       categoria,
       tipoPrato
     };
-    fetch('http://localhost:5000/meals', {
+    fetch('https://meal-planner-bgsh.onrender.com/meals', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
@@ -156,7 +156,7 @@ export default function AppRouter() {
     setTipoPrato('');
   };
   const handleDeleteMeal = (id) => {
-    fetch(`http://localhost:5000/meals/${id}`, {
+    fetch(`https://meal-planner-bgsh.onrender.com/meals/${id}`, {
       method: 'DELETE',
       credentials: 'include',
     }).then(() => setMeals(meals.filter(m => m.id !== id)));
@@ -164,7 +164,7 @@ export default function AppRouter() {
   // Novo: editar refeição
   const handleEditMeal = (updatedMeal) => {
     setMeals(meals => meals.map(m => m.id === updatedMeal.id ? { ...m, ...updatedMeal } : m));
-    fetch(`http://localhost:5000/meals/${updatedMeal.id}`, {
+    fetch(`https://meal-planner-bgsh.onrender.com/meals/${updatedMeal.id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
@@ -177,7 +177,7 @@ export default function AppRouter() {
     const meal = meals.find(m => m.id === id);
     if (!meal) return;
     const updatedMeal = { ...meal, isMenuOfDay: !meal.isMenuOfDay };
-    fetch(`http://localhost:5000/meals/${id}`,
+    fetch(`https://meal-planner-bgsh.onrender.com/meals/${id}`,
       {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
