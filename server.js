@@ -72,7 +72,7 @@ app.delete('/api/menuExecutivo/:id', (req, res) => {
 
 // Servir o frontend buildado (dist) pelo Express
 app.use(express.static(join(__dirname, 'dist')));
-app.get('*', (req, res) => {
+app.get(/^\/(?!api).*/, (req, res) => {
   res.sendFile(join(__dirname, 'dist', 'index.html'));
 });
 
