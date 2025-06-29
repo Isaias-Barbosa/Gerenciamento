@@ -28,4 +28,4 @@ dist-ssr
 .env.*
 **/.env
 **/.env.*
-backend/.env
+backend/.envbackend/.env
