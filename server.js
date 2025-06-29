@@ -27,6 +27,32 @@ app.get('/api/meals', (req, res) => {
   });
 });
 
+// --- Comentários ---
+const commentsPath = join(__dirname, 'backend/comentarios.json');
+app.get('/api/comments', (req, res) => {
+  fs.readFile(commentsPath, 'utf8', (err, data) => {
+    if (err) return res.status(500).json({ error: 'Erro ao ler comentarios.json' });
+    try {
+      const comments = JSON.parse(data);
+      res.json(comments);
+    } catch (e) {
+      res.status(500).json({ error: 'JSON inválido em comentarios.json' });
+    }
+  });
+});
+app.get('/api/comments/last/:n', (req, res) => {
+  fs.readFile(commentsPath, 'utf8', (err, data) => {
+    if (err) return res.status(500).json({ error: 'Erro ao ler comentarios.json' });
+    try {
+      const allComments = JSON.parse(data);
+      const n = parseInt(req.params.n, 10) || 10;
+      res.json(allComments.slice(-n).reverse());
+    } catch (e) {
+      res.status(500).json({ error: 'JSON inválido em comentarios.json' });
+    }
+  });
+});
+
 // --- Menus Executivos ---
 const menuExecutivoPath = join(__dirname, 'backend/menuExecutivo.json');
 

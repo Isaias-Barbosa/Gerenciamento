@@ -4,6 +4,8 @@ export default function HorizontalAutoCarousel({ items, itemWidth = 340, itemGap
   const [firstIdx, setFirstIdx] = React.useState(0);
   const totalItems = items.length;
 
+
+
   React.useEffect(() => {
     if (totalItems <= visible) return;
     const timer = setInterval(() => {
@@ -33,6 +35,7 @@ export default function HorizontalAutoCarousel({ items, itemWidth = 340, itemGap
             key={item.id || i}
             style={{ minWidth: itemWidth, maxWidth: itemWidth, borderRadius: 24, boxShadow: '0 6px 24px #0002', background: 'none', cursor: 'pointer', overflow: 'hidden', minHeight: 160, maxHeight: 260, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}
             onClick={() => onItemClick && onItemClick(item)}
+            
           >
             <img src={item.image} alt={item.name} title={item.name} style={{ width: '100%', height: 260, objectFit: 'cover', borderRadius: 18, marginBottom: 18 }} />
           </div>

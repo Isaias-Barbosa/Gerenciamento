@@ -87,6 +87,7 @@ function AppContent(props) {
 export default function AppRouter() {
   const [user, setUser] = useState(null);
   const [meals, setMeals] = useState([]);
+  const [comments, setComments] = useState([]);
   const [mealInput, setMealInput] = useState('');
   const [descInput, setDescInput] = useState('');
   const [dateInput, setDateInput] = useState('');
@@ -101,29 +102,36 @@ export default function AppRouter() {
   const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
-    fetch('https://meal-planner-bgsh.onrender.com/auth/user', { credentials: 'include' })
+    fetch('http://localhost:5000/auth/user', { credentials: 'include' })
       .then(res => res.json())
       .then(data => setUser(data.user || null));
   }, []);
 
   useEffect(() => {
-    fetch('https://meal-planner-bgsh.onrender.com/meals', { credentials: 'include' })
+    fetch('http://localhost:5000/meals', { credentials: 'include' })
       .then(res => res.json())
       .then(setMeals);
   }, [user]);
 
+  // Buscar comentários ao carregar
+  useEffect(() => {
+    fetch('http://localhost:5000/comments/last/8')
+      .then(res => res.json())
+      .then(data => setComments(data));
+  }, [user]);
+
   // Buscar propagandaIds do backend ao carregar
   useEffect(() => {
-    fetch('https://meal-planner-bgsh.onrender.com/meals/propaganda')
+    fetch('http://localhost:5000/meals/propaganda')
       .then(res => res.json())
       .then(data => setPropagandaIds(data.propagandaIds || []));
   }, []);
 
   const handleLogin = () => {
-    window.location.href = 'https://meal-planner-bgsh.onrender.com/auth/google';
+    window.location.href = 'http://localhost:5000/auth/google';
   };
   const handleLogout = () => {
-    window.location.href = 'https://meal-planner-bgsh.onrender.com/auth/logout';
+    window.location.href = 'http://localhost:5000/auth/logout';
   };
   // Novo: permite passar objeto completo para refeição
   const handleAddMeal = (mealObj) => {
@@ -138,7 +146,7 @@ export default function AppRouter() {
       categoria,
       tipoPrato
     };
-    fetch('https://meal-planner-bgsh.onrender.com/meals', {
+    fetch('http://localhost:5000/meals', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
@@ -156,7 +164,7 @@ export default function AppRouter() {
     setTipoPrato('');
   };
   const handleDeleteMeal = (id) => {
-    fetch(`https://meal-planner-bgsh.onrender.com/meals/${id}`, {
+    fetch(`http://localhost:5000/meals/${id}`, {
       method: 'DELETE',
       credentials: 'include',
     }).then(() => setMeals(meals.filter(m => m.id !== id)));
@@ -164,7 +172,7 @@ export default function AppRouter() {
   // Novo: editar refeição
   const handleEditMeal = (updatedMeal) => {
     setMeals(meals => meals.map(m => m.id === updatedMeal.id ? { ...m, ...updatedMeal } : m));
-    fetch(`https://meal-planner-bgsh.onrender.com/meals/${updatedMeal.id}`, {
+    fetch(`http://localhost:5000/meals/${updatedMeal.id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
@@ -177,7 +185,7 @@ export default function AppRouter() {
     const meal = meals.find(m => m.id === id);
     if (!meal) return;
     const updatedMeal = { ...meal, isMenuOfDay: !meal.isMenuOfDay };
-    fetch(`https://meal-planner-bgsh.onrender.com/meals/${id}`,
+    fetch(`http://localhost:5000/meals/${id}`,
       {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
@@ -193,6 +201,7 @@ export default function AppRouter() {
         handleLogin={handleLogin}
         handleLogout={handleLogout}
         meals={meals}
+        comments={comments}
         handleAddMeal={handleAddMeal}
         handleDeleteMeal={handleDeleteMeal}
         handleEditMeal={handleEditMeal}

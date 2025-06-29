@@ -68,13 +68,13 @@ export default function Home({ meals, propagandaIds }) {
               Você conhece o nosso {pratoDestaque.name}?
             </h1>
           </div>
-          <div style={{ display: 'flex', flexWrap: 'wrap', background: 'rgba(0,0,0,0.85)', borderRadius: 24, boxShadow: '0 30px 32px #0004', alignItems: 'center', overflow: 'hidden', minHeight: 420, maxWidth: 1100, margin: '0 auto 32px auto' }}>
-            <div style={{ flex: 1, minWidth: 500, maxWidth: 420, display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'rgba(0,0,0,0.15)', height: '100%' }}>
-              <img src={pratoDestaque.image} alt={pratoDestaque.name} style={{ width: 450, height: 360, objectFit: 'cover', borderRadius: '24px', boxShadow: '0 2px 16px #0006', margin: 32 }} />
+          <div style={{ display: 'flex', flexWrap: 'wrap', background: 'rgba(0,0,0,0.85)', borderRadius: 24, boxShadow: '0 30px 32px #0004', alignItems: 'center', overflow: 'hidden', minHeight: 320, maxWidth: 1100, margin: '0 auto 32px auto', flexDirection: window.innerWidth <= 768 ? 'column' : 'row' }}>
+            <div style={{ flex: 1, minWidth: window.innerWidth <= 768 ? 220 : 500, maxWidth: window.innerWidth <= 768 ? 320 : 420, display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'rgba(0,0,0,0.15)', height: '100%' }}>
+              <img src={pratoDestaque.image} alt={pratoDestaque.name} style={{ width: window.innerWidth <= 768 ? 220 : 450, height: window.innerWidth <= 768 ? 160 : 360, objectFit: 'cover', borderRadius: '24px', boxShadow: '0 2px 16px #0006', margin: 32 }} />
             </div>
-            <div style={{ flex: 2, minWidth: 320, padding: '40px 25px', color: '#fff', fontSize: 24, fontWeight: 500, letterSpacing: 1, textAlign: 'left', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-              <div style={{ marginBottom: 32, fontSize: 22, color: '#e0e0e0', fontWeight: 400, lineHeight: 1.5 }}>{pratoDestaque.description || 'Experimente o melhor da nossa culinária!'}</div>
-              <button onClick={() => navigate(`/meals/${pratoDestaque.id}`)} style={{ fontSize: 22, fontWeight: 700, background: 'linear-gradient(90deg,#2d7a46 60%,#27548A 100%)', color: '#fff', border: 'none', borderRadius: 32, padding: '18px 48px', cursor: 'pointer', boxShadow: '0 2px 16px #0006', letterSpacing: 1, marginTop: 8, alignSelf: 'flex-start', transition: 'background 0.2s' }}>
+            <div style={{ flex: 2, minWidth: 220, padding: window.innerWidth <= 768 ? '24px 10px' : '40px 25px', color: '#fff', fontSize: window.innerWidth <= 768 ? 18 : 24, fontWeight: 500, letterSpacing: 1, textAlign: 'left', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+              <div style={{ marginBottom: 32, fontSize: window.innerWidth <= 768 ? 16 : 22, color: '#e0e0e0', fontWeight: 400, lineHeight: 1.5 }}>{pratoDestaque.description || 'Experimente o melhor da nossa culinária!'}</div>
+              <button onClick={() => navigate(`/meals/${pratoDestaque.id}`)} style={{ fontSize: window.innerWidth <= 768 ? 16 : 22, fontWeight: 700, background: 'linear-gradient(90deg,#2d7a46 60%,#27548A 100%)', color: '#fff', border: 'none', borderRadius: 32, padding: window.innerWidth <= 768 ? '12px 24px' : '18px 48px', cursor: 'pointer', boxShadow: '0 2px 16px #0006', letterSpacing: 1, marginTop: 8, alignSelf: 'center', transition: 'background 0.2s' }}>
                 Saber Mais
               </button>
             </div>
@@ -94,7 +94,8 @@ export default function Home({ meals, propagandaIds }) {
           itemGap={48}
           visible={4}
           interval={4000}
-          onItemClick={meal => navigate(`/meals/${meal.id}`)}
+          onItemClick={meal => navigate(`/meals/${meal.id}` )}
+          
         />
       </section>
 
@@ -103,7 +104,7 @@ export default function Home({ meals, propagandaIds }) {
         <div style={{ width:'100%', padding:'24px 0', marginBottom:28}}>
           <h2 style={{ color: '#fff', fontSize: 48, fontWeight: 700, textAlign: 'center', margin:0 }}>Comentários de Clientes</h2>
         </div>
-        <CommentsCarousel comments={comments} cardsPerView={4} />
+        <CommentsCarousel comments={comments} cardsPerView={window.innerWidth <= 768 ? 1 : 4} />
       </section>
       {/* Section: Já provou o nosso Menu Executivo? */}
       <section style={{ width: '100vw', position: 'relative', left: '50%', right: '50%', marginLeft: '-50vw', marginRight: '-50vw', marginTop: 60, marginBottom: 0, padding: 0, minHeight: 420, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'none' }}>
@@ -111,11 +112,13 @@ export default function Home({ meals, propagandaIds }) {
         {/* Imagem do menu executivo do backend */}
         <MenuExecutivoBanner />
         <div style={{ position: 'relative', zIndex: 2, width: '100%', maxWidth: 1100, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', color: '#fff', padding: '48px 16px' }}>
-          <h2 style={{ fontSize: 54, fontWeight: 900, letterSpacing: 2, marginBottom: 18, textShadow: '0 4px 32px #000b', fontFamily: 'Cormorant Garamond, serif' }}>Já provou o nosso Menu Executivo?</h2>
-          <p style={{ fontSize: 26, fontWeight: 500, maxWidth: 700, margin: '0 auto 32px auto', textShadow: '0 2px 12px #000a', lineHeight: 1.3 }}>
+          <h2 style={{ fontSize: 54, fontWeight: 900, letterSpacing: 2, marginBottom: 18, textShadow: '0 4px 32px #000b', fontFamily: 'Cormorant Garamond, serif', maxWidth: window.innerWidth <= 768 ? 320 : 1000, whiteSpace: 'pre-line', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+            Já provou o nosso Menu Executivo?
+          </h2>
+          <p style={{ fontSize: window.innerWidth <= 768 ? 16 : 26, fontWeight: 500, maxWidth: window.innerWidth <= 768 ? 320 : 700, margin: '0 auto 32px auto', textShadow: '0 2px 12px #000a', lineHeight: 1.3, overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: window.innerWidth <= 768 ? 3 : 'unset', WebkitBoxOrient: 'vertical' }}>
             Descubra uma experiência gastronômica única com pratos selecionados especialmente para o seu almoço executivo. Todo dia um prato diferente, preparado com ingredientes frescos e o toque especial do nosso chef. Aproveite o sabor, a praticidade e o preço especial do nosso Menu Executivo!
           </p>
-          <button onClick={() => navigate('/menu-executivo')} style={{ fontSize: 22, fontWeight: 700, background: 'linear-gradient(90deg,#2d7a46 60%,#27548A 100%)', color: '#fff', border: 'none', borderRadius: 32, padding: '18px 48px', cursor: 'pointer', boxShadow: '0 2px 16px #0006', letterSpacing: 1, marginTop: 8, transition: 'background 0.2s' }}>
+          <button onClick={() => navigate('/menu-executivo')} style={{ fontSize: window.innerWidth <= 768 ? 16 : 22, fontWeight: 700, background: 'linear-gradient(90deg,#2d7a46 60%,#27548A 100%)', color: '#fff', border: 'none', borderRadius: 32, padding: window.innerWidth <= 768 ? '12px 24px' : '18px 48px', cursor: 'pointer', boxShadow: '0 2px 16px #0006', letterSpacing: 1, marginTop: 8, transition: 'background 0.2s' }}>
             Conheça o nosso Menu Executivo
           </button>
         </div>

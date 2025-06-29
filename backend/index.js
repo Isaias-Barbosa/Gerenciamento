@@ -5,6 +5,7 @@ const session = require('express-session');
 const passport = require('passport');
 const authRoutes = require('./routes/auth');
 const mealRoutes = require('./routes/meals');
+const commentsRoutes = require('./commentsRoutes');
 
 const app = express();
 app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
@@ -15,6 +16,7 @@ app.use(passport.session());
 
 app.use('/auth', authRoutes);
 app.use('/meals', mealRoutes);
+app.use('/comments', commentsRoutes);
 
 // Rota para retornar o usuário autenticado
 app.get('/auth/user', (req, res) => {

@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "foto": "https://randomuser.me/api/portraits/men/1.jpg",
+    "nome": "Carlos Silva",
+    "comentario": "Comida deliciosa e atendimento excelente! Voltarei mais vezes. Com certeza."
+  },
+  {
+    "id": 2,
+    "foto": "https://randomuser.me/api/portraits/women/2.jpg",
+    "nome": "Ana Paula",
+    "comentario": "Ambiente aconchegante, pratos bem servidos. Recomendo!"
+  },
+  {
+    "id": 3,
+    "foto": "https://randomuser.me/api/portraits/men/3.jpg",
+    "nome": "João Pedro",
+    "comentario": "O melhor restaurante da cidade, sem dúvidas."
+  },
+  {
+    "id": 4,
+    "foto": "https://randomuser.me/api/portraits/women/4.jpg",
+    "nome": "Mariana Souza",
+    "comentario": "Atendimento rápido e comida saborosa."
+  },
+  {
+    "id": 5,
+    "foto": "https://randomuser.me/api/portraits/men/5.jpg",
+    "nome": "Felipe Costa",
+    "comentario": "Ótimo custo-benefício, recomendo para toda família."
+  },
+  {
+    "id": 6,
+    "foto": "https://randomuser.me/api/portraits/women/6.jpg",
+    "nome": "Patrícia Lima",
+    "comentario": "Pratos criativos e muito bem apresentados."
+  },
+  {
+    "id": 7,
+    "foto": "https://randomuser.me/api/portraits/men/7.jpg",
+    "nome": "Eduardo Ramos",
+    "comentario": "Fui muito bem atendido, parabéns à equipe!"
+  },
+  {
+    "id": 8,
+    "foto": "https://randomuser.me/api/portraits/women/8.jpg",
+    "nome": "Juliana Alves",
+    "comentario": "Sobremesas maravilhosas, vale a pena experimentar."
+  },
+  {
+    "id": 9,
+    "foto": "https://randomuser.me/api/portraits/men/9.jpg",
+    "nome": "Ricardo Martins",
+    "comentario": "Cardápio variado e ingredientes frescos."
+  },
+  {
+    "id": 10,
+    "foto": "https://randomuser.me/api/portraits/women/10.jpg",
+    "nome": "Fernanda Dias",
+    "comentario": "Amei o menu executivo, opções deliciosas!"
+  },
+  {
+    "id": 11,
+    "foto": "https://randomuser.me/api/portraits/men/11.jpg",
+    "nome": "Bruno Ferreira",
+    "comentario": "Tudo perfeito, do início ao fim."
+  },
+  {
+    "id": 12,
+    "foto": "https://randomuser.me/api/portraits/women/12.jpg",
+    "nome": "Camila Rocha",
+    "comentario": "Ótimo para ir com amigos e família."
+  },
+  {
+    "id": 13,
+    "foto": "https://randomuser.me/api/portraits/men/13.jpg",
+    "nome": "André Luiz",
+    "comentario": "Garçons atenciosos e ambiente limpo."
+  },
+  {
+    "id": 14,
+    "foto": "https://randomuser.me/api/portraits/women/14.jpg",
+    "nome": "Larissa Gomes",
+    "comentario": "Experiência incrível, superou minhas expectativas."
+  },
+  {
+    "id": 15,
+    "foto": "https://randomuser.me/api/portraits/men/15.jpg",
+    "nome": "Lucas Oliveira",
+    "comentario": "Voltarei para experimentar outros pratos."
+  },
+  {
+    "id": 16,
+    "foto": "https://randomuser.me/api/portraits/women/16.jpg",
+    "nome": "Beatriz Santos",
+    "comentario": "Tudo muito gostoso, recomendo!"
+  },
+  {
+    "id": 17,
+    "foto": "https://randomuser.me/api/portraits/men/17.jpg",
+    "nome": "Marcelo Pinto",
+    "comentario": "Preço justo e qualidade excelente."
+  },
+  {
+    "id": 18,
+    "foto": "https://randomuser.me/api/portraits/women/18.jpg",
+    "nome": "Tatiane Lopes",
+    "comentario": "Fui com minha família e todos adoraram."
+  },
+  {
+    "id": 19,
+    "foto": "https://randomuser.me/api/portraits/men/19.jpg",
+    "nome": "Paulo Henrique",
+    "comentario": "Ambiente agradável e música boa."
+  },
+  {
+    "id": 20,
+    "foto": "https://randomuser.me/api/portraits/women/20.jpg",
+    "nome": "Gabriela Farias",
+    "comentario": "Super recomendo, experiência maravilhosa!"
+  }
+]

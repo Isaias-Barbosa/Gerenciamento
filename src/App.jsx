@@ -10,29 +10,36 @@ function App() {
 
   // Checa se o usuário está autenticado
   useEffect(() => {
-    fetch('https://meal-planner-bgsh.onrender.com/auth/user', { credentials: 'include' })
+    fetch('http://localhost:5000/auth/user', { credentials: 'include' })
       .then(res => res.json())
       .then(data => setUser(data.user || null));
   }, []);
 
   // Busca refeições
   useEffect(() => {
-    fetch('https://meal-planner-bgsh.onrender.com/meals', { credentials: 'include' })
+    fetch('http://localhost:5000/meals', { credentials: 'include' })
       .then(res => res.json())
       .then(setMeals);
   }, [user]);
 
+  useEffect(() => {
+    fetch('http://localhost:5000/comments/last/10')
+      .then(res => res.json())
+      .then(data => console.log(data)); // Aqui você pode processar os comentários como necessário
+  }, [user]);
+
+
   const handleLogin = () => {
-    window.location.href = 'https://meal-planner-bgsh.onrender.com/auth/google';
+    window.location.href = 'http://localhost:5000/auth/google';
   };
 
   const handleLogout = () => {
-    window.location.href = 'https://meal-planner-bgsh.onrender.com/auth/logout';
+    window.location.href = 'http://localhost:5000/auth/logout';
   };
 
   const handleAddMeal = () => {
     if (!mealInput || !dateInput) return;
-    fetch('https://meal-planner-bgsh.onrender.com/meals', {
+    fetch('http://localhost:5000/meals', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
@@ -51,10 +58,8 @@ function App() {
   };
 
   const handleDeleteMeal = (id) => {
-    fetch(`https://meal-planner-bgsh.onrender.com/meals/${id}`, {
-      method: 'DELETE',
-      credentials: 'include',
-    }).then(() => setMeals(meals.filter(m => m.id !== id)));
+    fetch(`http://localhost:5000/meals/${id}`, {
+   }).then(() => setMeals(meals.filter(m => m.id !== id)));
   };
 
   // Compartilhamento social
