@@ -7,7 +7,7 @@ const router = express.Router();
 const mealsPath = path.join(__dirname, '../backend/comentarios.json');
 
 // GET /api/meals - retorna todos os pratos
-router.get('/comments', (req, res) => {
+router.get('/api/comments', (req, res) => {
   fs.readFile(mealsPath, 'utf8', (err, data) => {
     if (err) {
       return res.status(500).json({ error: 'Erro ao ler comentarios.json' });
