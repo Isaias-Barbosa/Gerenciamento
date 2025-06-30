@@ -24,7 +24,7 @@ export default function AdminComments(props) {
   const [editText, setEditText] = useState('');
 
   useEffect(() => {
-    fetch('/comments')
+    fetch('/api/comments')
       .then(res => res.json())
       .then(data => setComments(data));
   }, []);
@@ -60,7 +60,7 @@ export default function AdminComments(props) {
       <AdminMenuBar />
       <div style={{ width: '100%', maxWidth: 900, background: '#fff', borderRadius: 16, boxShadow: '0 2px 16px #0001', padding: 32, marginTop: 36, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <h2 style={{ color: '#2d7a46', fontWeight: 700, fontSize: 22, marginBottom: 18 }}>Gestão de Comentários</h2>
-        <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: 18 }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: 18}}>
           <thead>
             <tr style={{ background: '#eaf2fa', color: '#23272f' }}>
               <th style={{ padding: 8, border: '1px solid ' }}>ID</th>
@@ -101,6 +101,8 @@ export default function AdminComments(props) {
           </tbody>
         </table>
       </div>
+        <div style={{padding:10}}></div>
     </div>
+  
   );
 }

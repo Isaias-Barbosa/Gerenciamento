@@ -4,6 +4,9 @@ import { useParams, useNavigate } from 'react-router-dom';
 export default function MealDetail({ meals }) {
   const { id } = useParams();
   const navigate = useNavigate();
+
+ 
+  // Use String comparison to ensure it works with both string and number IDs
   const meal = meals.find(m => String(m.id) === String(id));
 
 
