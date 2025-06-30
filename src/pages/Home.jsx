@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Carousel from '../components/Carousel';
 import CommentsCarousel from '../components/CommentsCarousel';
 import Footer from '../components/Footer';
 import HorizontalAutoCarousel from '../components/HorizontalAutoCarousel';
 import { useNavigate } from 'react-router-dom';
 import MenuExecutivoBanner from '../pages/MenuExecutivoBanner';
+
 
 const comments = [
   { name: 'Ana Paula', text: 'Comida deliciosa e atendimento excelente!', photo: 'https://randomuser.me/api/portraits/women/44.jpg' },
@@ -24,11 +25,23 @@ const comments = [
   { name: 'Felipe Souza', text: 'Voltarei para experimentar outros pratos.', photo: 'https://randomuser.me/api/portraits/men/60.jpg' },
 ];
 
-export default function Home({ meals, propagandaIds }) {
+
+export default function Home({ propagandaIds }) {
+
+   const [meals, setMeals] = useState([]);
+    const navigate = useNavigate();
+
   useEffect(() => {
     document.title = 'Sabor & Alma - Restaurante Gourmet';
+
+    fetch('/api/meals')
+      .then(res => res.json())
+       .then(data => setMeals(data))
+      .catch(err => console.error('Erro ao buscar meals:', err));
+        // Atualiza o estado global ou local com os dados recebidos
+        // Exemplo: setMeals(data);
   }, []);
-  const navigate = useNavigate();
+  
 
   // Pratos de propaganda (carousel)
   let propagandaIdsLocal = [];
