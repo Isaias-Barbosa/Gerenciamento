@@ -27,6 +27,20 @@ app.get('/api/meals', (req, res) => {
   });
 });
 
+app.get('/api/meals/:id', (req, res) => {
+  fs.readFile(mealsPath, 'utf8', (err, data) => {
+    if (err) return res.status(500).json({ error: 'Erro ao ler meals.json' });
+    try {
+      const meals = JSON.parse(data);
+      const meal = meals.find(m => String(m.id) === String(req.params.id));
+      if (!meal) return res.status(404).json({ error: 'Prato não encontrado' });
+      res.json(meal);
+    } catch (e) {
+      res.status(500).json({ error: 'JSON inválido em meals.json' });
+    }
+  });
+});
+
 // --- Comentários ---
 const commentsPath = join(__dirname, 'backend/comentarios.json');
 app.get('/api/comments', (req, res) => {
