@@ -29,7 +29,7 @@ app.get('/api/meals', (req, res) => {
 
 // --- Comentários ---
 const commentsPath = join(__dirname, 'backend/comentarios.json');
-app.get('/comments', (req, res) => {
+app.get('/api/comments', (req, res) => {
   fs.readFile(commentsPath, 'utf8', (err, data) => {
     if (err) return res.status(500).json({ error: 'Erro ao ler comentarios.json' });
     try {
@@ -40,7 +40,7 @@ app.get('/comments', (req, res) => {
     }
   });
 });
-app.get('/comments/last/:n', (req, res) => {
+app.get('/api/comments/last/:n', (req, res) => {
   fs.readFile(commentsPath, 'utf8', (err, data) => {
     if (err) return res.status(500).json({ error: 'Erro ao ler comentarios.json' });
     try {

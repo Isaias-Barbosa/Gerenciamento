@@ -7,8 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': 'http://localhost:3333',
-       '/auth': 'http://localhost:3333',
-      '/comments': 'http://localhost:3333',
+      
     }
   }
 })

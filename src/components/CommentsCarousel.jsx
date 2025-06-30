@@ -6,7 +6,7 @@ export default function CommentsCarousel({ cardsPerView = 1 }) {
   const [cards, setCards] = React.useState(cardsPerView);
 
   useEffect(() => {
-    fetch('/comments/last/10')
+    fetch('/api/comments/last/10')
       .then(res => res.json())
       .then(data => setComments(data.map(c => ({
         name: c.nome,
