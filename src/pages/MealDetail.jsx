@@ -1,22 +1,45 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
-export default function MealDetail({ meals }) {
+export default function MealDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
 
+  const [meal, setMeal] = useState(null);
+
  
   // Use String comparison to ensure it works with both string and number IDs
-  const meal = meals.find(m => String(m.id) === String(id));
-
+ const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    document.title = meal ? meal.name : 'Detalhe do Prato';
-  }, [meal]);
+    setLoading(true);
+    fetch('/api/meals/' + id)
+      .then(res => {
+        if (!res.ok) throw new Error('Erro ao buscar o prato');
+        return res.json();
+      })
+      .then(data => {
+        setMeal(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        setError(err.message);
+        setLoading(false);
+      });
+  }, [id]);
 
-  if (!meal) {
-    return <div style={{ textAlign: 'center', margin: 40, color: '#e74c3c' }}>Prato não encontrado.<br/><button onClick={() => navigate('/meals')} style={{ marginTop: 16, background: '#2d7a46', color: '#fff', border: 'none', borderRadius: 6, padding: '8px 20px', fontWeight: 600, cursor: 'pointer' }}>Voltar</button></div>;
+   useEffect(() => {
+  if (meal) {
+    document.title = meal.name;
   }
+}, [meal]);
+
+  if (loading) return <div>Carregando...</div>;
+  if (error) return <div style={{ color: 'red' }}>{error}</div>;
+  if (!meal) return <div>Prato não encontrado</div>;
+
+
 
   return (
     <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #23272f 0%, #18181b 100%)', fontFamily: 'Segoe UI, Arial, sans-serif', paddingTop: 90 }}>
