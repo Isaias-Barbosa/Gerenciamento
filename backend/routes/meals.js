@@ -75,4 +75,15 @@ router.put('/propaganda/set', (req, res) => {
   res.json({ propagandaIds });
 });
 
+router.get('/:id', (req, res) => {
+  const { id } = req.params;
+  const meal = meals.find(m => String(m.id) === id); // compara como string
+
+  if (!meal) {
+    return res.status(404).json({ error: 'Prato não encontrado' });
+  }
+
+  res.json(meal);
+});
+
 module.exports = router;

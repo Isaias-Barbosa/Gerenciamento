@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../components/Footer';
 
@@ -17,8 +17,20 @@ const tipos = [
   'Sobremesa'
 ];
 
-export default function PublicMeals({ meals }) {
+export default function PublicMeals() {
+  const [meals, setMeals] = useState([]);
   const navigate = useNavigate();
+
+   // Buscar os pratos ao carregar a página
+  useEffect(() => {
+    fetch('/api/meals')
+      .then(res => res.json())
+      .then(data => setMeals(data))
+      .catch(err => console.error('Erro ao buscar meals:', err));
+  }, []);
+
+
+
   // Agrupa por categoria e tipo
   const agrupado = useMemo(() => {
     const obj = {};

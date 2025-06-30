@@ -107,7 +107,7 @@ export default function Home({ propagandaIds }) {
           itemGap={48}
           visible={4}
           interval={4000}
-          onItemClick={meal => navigate(`/api/meals/${meal.id}` )}
+          onItemClick={meal => navigate(`/meals/${meal.id}` )}
           
         />
       </section>

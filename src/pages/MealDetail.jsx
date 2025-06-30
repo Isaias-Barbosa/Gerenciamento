@@ -4,7 +4,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 export default function MealDetail({ meals }) {
   const { id } = useParams();
   const navigate = useNavigate();
-  const meal = meals.find(m => m.id === id);
+  const meal = meals.find(m => String(m.id) === String(id));
+
 
   useEffect(() => {
     document.title = meal ? meal.name : 'Detalhe do Prato';
